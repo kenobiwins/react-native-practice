@@ -9,14 +9,16 @@ interface Props {
 }
 
 const HomeScreen = ({ navigation }: Props) => {
-  const routes = Object.values(Routes);
+  const routes = Object.values(Routes).slice(1);
 
   return (
     <View>
       <Text style={styles.text}>hello home</Text>
       <FlatList
         keyExtractor={(item) => item}
-        renderItem={({ item }) => <Button onPress={() => navigation.navigate(item)} title={item} />}
+        renderItem={({ item }) => (
+          <Button onPress={() => navigation.navigate(item)} title={"Go to " + item + " Demo"} />
+        )}
         data={routes}
       />
     </View>
