@@ -5,6 +5,7 @@ export enum Routes {
   IMAGE = "Image",
   COUNTER = "Counter",
   COLOR = "Color",
-  SQUARE = 'Square',
-  TEXT = 'Text'
+  SQUARE = "Square",
+  TEXT = "Text",
+  BOX = "Box",
 }
